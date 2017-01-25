@@ -1,0 +1,46 @@
+@import "./config.less";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+div{
+  outline:none
+}
+
+body{
+  background: @background_color;
+  font-size: 12px;
+  font-family: Consolas, "Microsoft YaHei UI", Menlo, Monaco, "Courier New", monospace;
+}
+
+.ko-hide{
+  display: none !important;
+}
+
+.ko-ui{
+  &.ko-block{
+    border: 1px solid @border_color;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 20px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 0 #888888;
+    background: #ffffff;
+    &:hover{
+      box-shadow:0 2px 7px rgba(0,0,0,.15);
+      border-color:transparent;
+    }
+  }
+}
+
+@keyframes ko-load-loop{
+  from{transform:rotate(0)}50%{transform:rotate(180deg)}to{transform:rotate(360deg)}
+}
+
+.ko-loading{
+  display: inline-block;
+  animation: ko-load-loop 1s linear infinite;
+}

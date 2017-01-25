@@ -1,0 +1,252 @@
+@import "config.less";
+
+.ko-button{
+  outline: 0;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: @radius;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 15px;
+  background: @background_color;
+  border: 1px solid @border_color;
+  color: @content_color;
+  font-weight: 400;
+  font-size: 12px;
+  transition: color .2s linear,background-color .2s linear,border .2s linear;
+  &.ko-hover{
+    background: #ffffff;
+    color: @light_primary_color;
+    border-color: @light_primary_color;
+  }
+  &.ko-active{
+    background: darken(#ffffff, 5%);
+    color: @dark_primary_color;
+    border-color: @dark_primary_color;
+  }
+  &.ko-primary, &.ko-info, &.ko-success, &.ko-warning, &.ko-error{
+    border: 0 solid;
+    color: #ffffff;
+    &.ko-active{
+      color: #ffffff;
+    }
+  }
+  &.ko-primary{
+    background: @primary_color;
+    &.ko-hover{
+      background: @light_primary_color;
+    }
+    &.ko-active{
+      background: @dark_primary_color !important;
+    }
+  }
+  &.ko-ghost{
+    background: #ffffff;
+    &.ko-active{
+      background: darken(#ffffff, 5%);
+    }
+  }
+  &.ko-dashed{
+    background: #ffffff;
+    border-style: dashed;
+    &.ko-active{
+      background: darken(#ffffff, 5%);
+    }
+  }
+  &.ko-text{
+    background: inherit;
+    border: 0 solid;
+  }
+  &.ko-info{
+    background: @info_color;
+    &.ko-hover{
+      background: lighten(@info_color, 5%);
+    }
+    &.ko-active{
+      background: @primary_color;
+    }
+  }
+  &.ko-success{
+    background: @success_color;
+    &.ko-hover{
+      background: lighten(@success_color, 5%);
+    }
+    &.ko-active{
+      background: darken(@success_color, 5%) !important;
+    }
+  }
+  &.ko-warning{
+    background: @warning_color;
+    &.ko-hover{
+      background: lighten(@warning_color, 5%);
+    }
+    &.ko-active{
+      background: darken(@warning_color, 5%) !important;
+    }
+  }
+  &.ko-error{
+    background: @error_color;
+    &.ko-hover{
+      background: lighten(@error_color, 5%);
+    }
+    &.ko-active{
+      background: darken(@error_color, 5%) !important;
+    }
+  }
+  .iconfont{
+    margin-right: 5px;
+    font-size: 10px;
+  }
+  &.ko-circle{
+    border-radius: 32px;
+    &.ko-icon-only{
+      padding: 0;
+      width: 32px;
+      border-radius: 50%;
+      .iconfont{
+        margin-right: 0;
+        font-size: 16px;
+      }
+    }
+  }
+  &.ko-fluid{
+    display: block;
+  }
+  &.ko-large{
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    .iconfont{
+      margin-right: 5px;
+      font-size: 16px;
+    }
+    &.ko-circle{
+      border-radius: 42px;
+      &.ko-icon-only{
+        padding: 0;
+        width: 42px;
+        .iconfont{
+          margin-right: 0;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &.ko-small{
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    .iconfont{
+      margin-right: 5px;
+      font-size: 10px;
+    }
+    &.ko-circle{
+      border-radius: 22px;
+      &.ko-icon-only{
+        padding: 0;
+        width: 22px;
+        .iconfont{
+          margin-right: 0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &.ko-disable{
+    background: @disabled_color;
+    color: @sub_color;
+    cursor: not-allowed;
+    &.ko-hover{
+      background: @disabled_color;
+      color: @sub_color;
+    }
+    &.ko-active{
+      background: @disabled_color !important;
+      color: @sub_color !important;
+    }
+  }
+}
+
+.ko-button-group{
+  display: inline-block;
+  font-size: 0;
+  .ko-button{
+    border-radius: 0;
+  }
+  ko-button:first-child{
+     .ko-button{
+       border-top-left-radius: @radius;
+       border-bottom-left-radius: @radius;
+     }
+   }
+  ko-button:last-child{
+    .ko-button{
+      border-top-right-radius: @radius;
+      border-bottom-right-radius: @radius;
+    }
+  }
+  &.ko-circle{
+    ko-button:first-child{
+      .ko-button{
+        border-top-left-radius: 32px;
+        border-bottom-left-radius: 32px;
+      }
+    }
+    ko-button:last-child{
+      .ko-button{
+        border-top-right-radius: 32px;
+        border-bottom-right-radius: 32px;
+      }
+    }
+  }
+  .ko-icon-only{
+    .iconfont{
+      margin-right: 0;
+    }
+  }
+  &.ko-large{
+    .ko-button{
+      height: 42px;
+      line-height: 42px;
+      font-size: 18px;
+      .iconfont{
+        font-size: 16px;
+      }
+    }
+  }
+  &.ko-small{
+    .ko-button{
+      height: 22px;
+      line-height: 22px;
+      font-size: 12px;
+      .iconfont{
+        font-size: 10px;
+      }
+    }
+  }
+  &.ko-vertical{
+    .ko-button{
+      display: block;
+    }
+    ko-button{
+      .ko-button{
+        border-radius: 0;
+      }
+      &:first-child{
+        .ko-button{
+          border-top-left-radius: @radius;
+          border-top-right-radius: @radius;
+        }
+      }
+      &:last-child{
+        .ko-button{
+          border-bottom-left-radius: @radius;
+          border-bottom-right-radius: @radius;
+        }
+      }
+    }
+  }
+}

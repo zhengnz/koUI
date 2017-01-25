@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "browserify-global-shim": "^1.0.3",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "stringify": "^5.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-global-shim"
+    ]
+  },
+  "browserify-global-shim": {
+    "knockout": "ko"
+  }
+}

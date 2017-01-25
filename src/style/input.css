@@ -1,0 +1,102 @@
+.ko-input-box {
+  display: inline-block;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #b7bdc4;
+  background-color: #fff;
+  background-image: none;
+  transition: border 0.2s ease-in-out, background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.ko-input-box.hover,
+.ko-input-box.focus {
+  border-color: #3399ff;
+}
+.ko-input-box.focus {
+  box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+}
+.ko-input-box .ko-input-wrapper {
+  margin: 0 8px;
+  height: 32.2px;
+}
+.ko-input-box .ko-input-wrapper.icon-right {
+  margin-right: 32px;
+}
+.ko-input-box .ko-input-wrapper.icon-left {
+  margin-left: 32px;
+}
+.ko-input-box .ko-input-wrapper .ko-input {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  color: #657180;
+  background-color: #fff;
+  background-image: none;
+  cursor: text;
+  border: 0 solid;
+  outline: 0;
+}
+.ko-input-box .ko-input-wrapper .ko-input:focus {
+  outline: 0;
+  border: 0 solid;
+}
+.ko-input-box .ko-input-wrapper .ko-input::-ms-clear,
+.ko-input-box .ko-input-wrapper .ko-input::-ms-reveal {
+  display: none;
+}
+.ko-input-box .ko-input-wrapper .iconfont {
+  position: absolute;
+}
+.ko-input-box .ko-input-wrapper .iconfont.right {
+  top: 8px;
+  right: 8px;
+}
+.ko-input-box .ko-input-wrapper .iconfont.left {
+  top: 8px;
+  left: 8px;
+}
+.ko-input-box .ko-input-wrapper.large {
+  height: 42.2px;
+}
+.ko-input-box .ko-input-wrapper.large.icon-right {
+  margin-right: 42px;
+}
+.ko-input-box .ko-input-wrapper.large.icon-left {
+  margin-left: 42px;
+}
+.ko-input-box .ko-input-wrapper.large .ko-input {
+  height: 42px;
+  line-height: 42px;
+}
+.ko-input-box .ko-input-wrapper.large .iconfont.right {
+  top: 13px;
+  right: 13px;
+}
+.ko-input-box .ko-input-wrapper.large .iconfont.left {
+  top: 13px;
+  left: 13px;
+}
+.ko-input-box .ko-input-wrapper.small {
+  height: 22.2px;
+}
+.ko-input-box .ko-input-wrapper.small.icon-right {
+  margin-right: 22px;
+}
+.ko-input-box .ko-input-wrapper.small.icon-left {
+  margin-left: 22px;
+}
+.ko-input-box .ko-input-wrapper.small .ko-input {
+  height: 22px;
+  line-height: 22px;
+}
+.ko-input-box .ko-input-wrapper.small .iconfont {
+  font-size: 14px;
+}
+.ko-input-box .ko-input-wrapper.small .iconfont.right {
+  top: 4px;
+  right: 4px;
+}
+.ko-input-box .ko-input-wrapper.small .iconfont.left {
+  top: 4px;
+  left: 4px;
+}

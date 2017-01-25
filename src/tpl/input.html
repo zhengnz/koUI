@@ -1,0 +1,46 @@
+<div class="ko-input-box" data-bind="visible: visible, css: {
+    focus: focus,
+    hover: hover
+}, event: {mouseover: function(){hover(true);}, mouseout: function(){hover(false);}}">
+    <div class="ko-input-wrapper" data-bind="css: {
+        large: size() == 'large',
+        small: size() == 'small',
+        'icon-left': left_icon() || left_icon_text(),
+        'icon-right': right_icon() || right_icon_text()}">
+        <!--ko if: type() == 'text'-->
+        <input class="ko-input" type="text" data-bind="
+            textInput: value,
+            hasFocus: focus,
+            disable: disable,
+            attr: {placeholder: placeholder}" />
+        <!--/ko-->
+
+        <!--ko if: type() == 'password'-->
+        <input class="ko-input" type="password" data-bind="
+            textInput: value,
+            hasFocus: focus,
+            disable: disable,
+            attr: {placeholder: placeholder}" />
+        <!--/ko-->
+
+        <!--ko if: left_icon-->
+        <i data-bind="attr:{'class': left_icon}"></i>
+        <!--/ko-->
+
+        <!--ko ifnot: left_icon-->
+        <!--ko if: left_icon_text-->
+        <i class="iconfont left" data-bind="text: left_icon_text"></i>
+        <!--/ko-->
+        <!--/ko-->
+
+        <!--ko if: right_icon-->
+        <i data-bind="attr:{'class': right_icon}"></i>
+        <!--/ko-->
+
+        <!--ko ifnot: right_icon-->
+        <!--ko if: right_icon_text-->
+        <i class="iconfont right" data-bind="text: right_icon_text"></i>
+        <!--/ko-->
+        <!--/ko-->
+    </div>
+</div>

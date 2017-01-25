@@ -1,0 +1,82 @@
+.col-span(@num){
+  width: (@num / 24) * 100%;
+}
+.col-pull(@num){
+  right: (@num / 24) * 100%;
+}
+.col-push(@num){
+  left: (@num / 24) * 100%;
+}
+.col-offset(@num){
+  margin-left: (@num / 24) * 100%;
+}
+
+.ko-row{
+  margin-left: 0;
+  margin-right: 0;
+  height: auto;
+  zoom: 1;
+  display: block;
+  position: relative;
+  &:after{
+    display:block;
+    clear:both;
+    content:'';
+    visibility:hidden;
+    height:0;
+  }
+  .ko-col{
+    position: relative;
+    float: left;
+    display: block;
+    *overflow: hidden;
+
+    .loop-span(@num, @type) when (@num < 25){
+      &.ko@{type}-span-@{num}{.col-span(@num);}
+      .loop-span(@num+1, @type);
+    }
+
+    .loop-pull(@num, @type) when (@num < 25){
+      &.ko@{type}-pull-@{num}{.col-pull(@num);}
+      .loop-pull(@num+1, @type);
+    }
+
+    .loop-push(@num, @type) when (@num < 25){
+      &.ko@{type}-push-@{num}{.col-push(@num);}
+      .loop-push(@num+1, @type);
+    }
+
+    .loop-offset(@num, @type) when (@num < 25) {
+      &.ko@{type}-offset-@{num} {
+        .col-offset(@num);
+      }
+      .loop-offset(@num+1, @type);
+    }
+
+    .loop-span(1, escape(''));
+    .loop-pull(0, escape(''));
+    .loop-push(0, escape(''));
+    .loop-offset(0, escape(''));
+
+    @media (min-width: 768px){
+      .loop-span(1, -sm);
+      .loop-pull(0, -sm);
+      .loop-push(0, -sm);
+      .loop-offset(0, -sm);
+    }
+
+    @media (min-width: 992px){
+      .loop-span(1, -md);
+      .loop-pull(0, -md);
+      .loop-push(0, -md);
+      .loop-offset(0, -md);
+    }
+
+    @media (min-width: 1200px){
+      .loop-span(1, -lg);
+      .loop-pull(0, -lg);
+      .loop-push(0, -lg);
+      .loop-offset(0, -lg);
+    }
+  }
+}

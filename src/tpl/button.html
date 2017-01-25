@@ -1,0 +1,17 @@
+<a data-bind="attr:{'class': cls, href: href},
+                   event: {mousedown: mouseDown, mouseup: mouseUp, mouseover: mouseOver, mouseout: mouseOut},
+                   click: click, disable: disable()">
+    <!--ko if: loading-->
+    <i class="iconfont ko-loading">&#xe667;</i>
+    <!--/ko-->
+
+    <!--ko ifnot: loading-->
+        <!--ko if: icon-->
+        <i data-bind="attr:{'class':icon}, event: {mousedown: mouseDown, mouseup: mouseUp}"></i>
+        <!--/ko-->
+        <!--ko if: icon_text-->
+        <i class="iconfont" data-bind="text: icon_text, event: {mousedown: mouseDown, mouseup: mouseUp}"></i>
+        <!--/ko-->
+    <!--/ko-->
+    <span><!--ko template: {nodes: $componentTemplateNodes, data: data}--><!--/ko--></span>
+</a>

@@ -1,0 +1,27 @@
+body {
+  padding: 20px;
+}
+.animate {
+  transition: 1s;
+}
+.animate.init {
+  opacity: 0;
+}
+.animate.visible {
+  opacity: 1;
+}
+.test-layout .ko-row {
+  margin-bottom: 20px;
+}
+.test-layout ko-col .ko-col {
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+.test-layout ko-col .ko-col div {
+  background: #5cadff;
+}
+.test-layout ko-col:nth-child(odd) .ko-col div {
+  background: #007af5;
+}

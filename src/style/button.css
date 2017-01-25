@@ -1,0 +1,233 @@
+.ko-button {
+  outline: 0;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 15px;
+  background: #f5f7f9;
+  border: 1px solid #b7bdc4;
+  color: #657180;
+  font-weight: 400;
+  font-size: 12px;
+  transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear;
+}
+.ko-button.ko-hover {
+  background: #ffffff;
+  color: #5cadff;
+  border-color: #5cadff;
+}
+.ko-button.ko-active {
+  background: #f2f2f2;
+  color: #0073e5;
+  border-color: #0073e5;
+}
+.ko-button.ko-primary,
+.ko-button.ko-info,
+.ko-button.ko-success,
+.ko-button.ko-warning,
+.ko-button.ko-error {
+  border: 0 solid;
+  color: #ffffff;
+}
+.ko-button.ko-primary.ko-active,
+.ko-button.ko-info.ko-active,
+.ko-button.ko-success.ko-active,
+.ko-button.ko-warning.ko-active,
+.ko-button.ko-error.ko-active {
+  color: #ffffff;
+}
+.ko-button.ko-primary {
+  background: #3399ff;
+}
+.ko-button.ko-primary.ko-hover {
+  background: #5cadff;
+}
+.ko-button.ko-primary.ko-active {
+  background: #0073e5 !important;
+}
+.ko-button.ko-ghost {
+  background: #ffffff;
+}
+.ko-button.ko-ghost.ko-active {
+  background: #f2f2f2;
+}
+.ko-button.ko-dashed {
+  background: #ffffff;
+  border-style: dashed;
+}
+.ko-button.ko-dashed.ko-active {
+  background: #f2f2f2;
+}
+.ko-button.ko-text {
+  background: inherit;
+  border: 0 solid;
+}
+.ko-button.ko-info {
+  background: #4da6ff;
+}
+.ko-button.ko-info.ko-hover {
+  background: #66b2ff;
+}
+.ko-button.ko-info.ko-active {
+  background: #3399ff;
+}
+.ko-button.ko-success {
+  background: #00cc66;
+}
+.ko-button.ko-success.ko-hover {
+  background: #00e673;
+}
+.ko-button.ko-success.ko-active {
+  background: #00b359 !important;
+}
+.ko-button.ko-warning {
+  background: #ff9900;
+}
+.ko-button.ko-warning.ko-hover {
+  background: #ffa31a;
+}
+.ko-button.ko-warning.ko-active {
+  background: #e68a00 !important;
+}
+.ko-button.ko-error {
+  background: #ff6600;
+}
+.ko-button.ko-error.ko-hover {
+  background: #ff751a;
+}
+.ko-button.ko-error.ko-active {
+  background: #e65c00 !important;
+}
+.ko-button .iconfont {
+  margin-right: 5px;
+  font-size: 10px;
+}
+.ko-button.ko-circle {
+  border-radius: 32px;
+}
+.ko-button.ko-circle.ko-icon-only {
+  padding: 0;
+  width: 32px;
+  border-radius: 50%;
+}
+.ko-button.ko-circle.ko-icon-only .iconfont {
+  margin-right: 0;
+  font-size: 16px;
+}
+.ko-button.ko-fluid {
+  display: block;
+}
+.ko-button.ko-large {
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+}
+.ko-button.ko-large .iconfont {
+  margin-right: 5px;
+  font-size: 16px;
+}
+.ko-button.ko-large.ko-circle {
+  border-radius: 42px;
+}
+.ko-button.ko-large.ko-circle.ko-icon-only {
+  padding: 0;
+  width: 42px;
+}
+.ko-button.ko-large.ko-circle.ko-icon-only .iconfont {
+  margin-right: 0;
+  font-size: 18px;
+}
+.ko-button.ko-small {
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+}
+.ko-button.ko-small .iconfont {
+  margin-right: 5px;
+  font-size: 10px;
+}
+.ko-button.ko-small.ko-circle {
+  border-radius: 22px;
+}
+.ko-button.ko-small.ko-circle.ko-icon-only {
+  padding: 0;
+  width: 22px;
+}
+.ko-button.ko-small.ko-circle.ko-icon-only .iconfont {
+  margin-right: 0;
+  font-size: 12px;
+}
+.ko-button.ko-disable {
+  background: #c3cbd6;
+  color: #9ea7b4;
+  cursor: not-allowed;
+}
+.ko-button.ko-disable.ko-hover {
+  background: #c3cbd6;
+  color: #9ea7b4;
+}
+.ko-button.ko-disable.ko-active {
+  background: #c3cbd6 !important;
+  color: #9ea7b4 !important;
+}
+.ko-button-group {
+  display: inline-block;
+  font-size: 0;
+}
+.ko-button-group .ko-button {
+  border-radius: 0;
+}
+.ko-button-group ko-button:first-child .ko-button {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.ko-button-group ko-button:last-child .ko-button {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.ko-button-group.ko-circle ko-button:first-child .ko-button {
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+}
+.ko-button-group.ko-circle ko-button:last-child .ko-button {
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+.ko-button-group .ko-icon-only .iconfont {
+  margin-right: 0;
+}
+.ko-button-group.ko-large .ko-button {
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+}
+.ko-button-group.ko-large .ko-button .iconfont {
+  font-size: 16px;
+}
+.ko-button-group.ko-small .ko-button {
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+}
+.ko-button-group.ko-small .ko-button .iconfont {
+  font-size: 10px;
+}
+.ko-button-group.ko-vertical .ko-button {
+  display: block;
+}
+.ko-button-group.ko-vertical ko-button .ko-button {
+  border-radius: 0;
+}
+.ko-button-group.ko-vertical ko-button:first-child .ko-button {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.ko-button-group.ko-vertical ko-button:last-child .ko-button {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
