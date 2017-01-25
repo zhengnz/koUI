@@ -29,13 +29,13 @@
         }
       })
     })).pipe(rename({
-      basename: 'ko-ui',
+      basename: 'kox',
       suffix: '.min'
     })).pipe(uglify()).pipe(gulp.dest('./dist'));
   });
 
   gulp.task('minify-css', function() {
-    return gulp.src('./dist/ko-ui.css').pipe(cleanCSS({
+    return gulp.src('./dist/kox.css').pipe(cleanCSS({
       compatibility: 'ie8'
     })).pipe(rename({
       suffix: '.min'

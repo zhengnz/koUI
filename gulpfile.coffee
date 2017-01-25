@@ -17,14 +17,14 @@ gulp.task "browserify", ->
     }
   }
   .pipe rename {
-    basename: 'ko-ui'
+    basename: 'kox'
     suffix: '.min'
   }
   .pipe uglify()
   .pipe gulp.dest './dist'
 
 gulp.task 'minify-css', ->
-  gulp.src './dist/ko-ui.css'
+  gulp.src './dist/kox.css'
   .pipe cleanCSS {compatibility: 'ie8'}
   .pipe rename {
     suffix: '.min'
